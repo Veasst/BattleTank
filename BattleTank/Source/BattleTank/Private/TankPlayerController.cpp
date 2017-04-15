@@ -3,15 +3,16 @@
 #include "BattleTank.h"
 #include "TankPlayerController.h"
 
+void ATankPlayerController::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
+	//AimTowardsCrosshair();
+}
+
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("PlayerController Begin Play"));
-
-	if (GetControlledTank() != nullptr)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Player's tank: %s"), *GetControlledTank()->GetName());
-	}
 }
 
 ATank* ATankPlayerController::GetControlledTank() const

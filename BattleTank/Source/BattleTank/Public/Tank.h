@@ -18,9 +18,6 @@ public:
 	ATank();
 	void AimAt(FVector HitLocation);
 
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	UFUNCTION(BlueprintCallable, Category = Setup)
 	void SetBarrelReference(UTankBarrel* BarrelToSet);
 

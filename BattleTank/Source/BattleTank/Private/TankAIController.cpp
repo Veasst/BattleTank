@@ -8,13 +8,7 @@ void ATankAIController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	UE_LOG(LogTemp, Warning, TEXT("TankAIController possessed: %s"), *GetControlledTank()->GetName());
-
 	ATank* PlayerTank = GetPlayerTank();
-	if (PlayerTank)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("%s TankAIController found: %s"), *GetControlledTank()->GetName(), *PlayerTank->GetName());
-	}
 }
 
 void ATankAIController::Tick(float DeltaSeconds)

@@ -51,7 +51,6 @@ void ATank::AimAt(FVector HitLocation)
 void ATank::Fire()
 {
 	bool isReloaded = FPlatformTime::Seconds() - LastFireTime > ReloadTimeInSeconds;
-	UE_LOG(LogTemp, Warning, TEXT("Player fired"));
 
 	if (Barrel && isReloaded) 
 	{ 
